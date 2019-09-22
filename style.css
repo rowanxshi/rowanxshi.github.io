@@ -9,6 +9,7 @@
   --nav-bg: rgb(155,155,205);
   --shadow-bg: rgb(255,205,155);
   --section-bg: rgb(230,220,225);
+  --radius: 0.15em;
   /* --header-bg: rgb(153,102,102); */
   /* --nav-bg: rgb(204,153,153); */
 
@@ -93,7 +94,7 @@ a {
   display: inline-block;
   margin: 0 1.5em var(--small-skip) 0;
   padding: 0;
-  border-radius: .15em;
+  border-radius: var(--radius);
   width: 100%;
   box-shadow: var(--small-skip) var(--small-skip) var(--shadow-bg);
 }
@@ -101,7 +102,7 @@ a {
 .section {
   font: bold 1.5em/1em var(--heading-font);
   color: var(--header-bg);
-  border-radius: .15em;
+  border-radius: var(--radius);
   background-color: var(--section-bg);
   padding: 0.25em 0 0.25em var(--small-skip);
   margin: var(--med-skip) 0 var(--small-skip) 0;
