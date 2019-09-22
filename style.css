@@ -1,0 +1,139 @@
+:root {
+  /* DESIGN ELEMENTS */
+  --body-bg: rgb(255,240,245);
+  --header-bg: rgb(50,50,100);
+  --nav-bg: rgb(155,155,205);
+  --shadow-col:  rgb(255,205,155);
+  /* --header-bg: rgb(153,102,102); */
+  /* --nav-bg: rgb(204,153,153); */
+
+  /* TEXT COLOURS */
+  --name-col: rgb(255,235,200);
+  --nav-col: var(--name-col);
+  --link-col: rgb(115,115,225);
+  --body-col: rgb(115,115,115);
+
+  /* FONT FACES */
+  --serif-font: 'Noto Serif';
+  --ss-font: 'Lato';
+  --heading-font: 'Domine';
+
+  /* FONT SIZES */
+  --font-size: 14pt;
+  --small-font: 0.9em;
+
+  /* SPACING */
+  --small-skip: 0.5em;
+  --med-skip: 1em;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+#header, #nav {
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+#header {
+  background-color: var(--header-bg);
+}
+.name {
+  font: bold 3em/1em var(--heading-font);
+  letter-spacing: .25em;
+  color: var(--name-col);
+  padding-top: var(--med-skip);
+  padding-bottom: var(--small-skip);
+  margin: 0;
+}
+.name a, #nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* NAVIGATION */
+#nav {
+  font: var(--small-font)/1em var(--ss-font);
+  background-color: var(--nav-bg);
+  padding-top: var(--small-skip);
+  padding-bottom: var(--small-skip);
+  color: var(--header-bg);
+  letter-spacing: .1em;
+}
+#nav a {
+  color: var(--nav-col);
+}
+
+/* BODY */
+body {
+  font: var(--font-size) var(--serif-font);
+  margin: 0px;
+  background-color: var(--body-bg);
+  color: var(--body-col);
+}
+#container {
+  max-width: 37em;
+  margin: 2em auto 5em auto;
+  padding-left: 3em;
+  padding-right: 3em;
+  height: auto;
+}
+a {
+  color: var(--link-col);
+}
+/* PHOTO */
+#photo {
+  max-width: 15em;
+  float: left;
+  display: inline-block;
+  margin: 0 1.5em var(--small-skip) 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: var(--small-skip) var(--small-skip) var(--shadow-col);
+}
+/* HEADINGS */
+h2 {
+  font-size: bold 1.5em/1em var(--heading-font);
+  color: var(--header-bg);
+  border-bottom: 2px dotted var(--nav-bg);
+  padding-left: var(--small-skip);
+  margin: var(--med-skip) 0 var(--small-skip) 0;
+}
+/* TEXT */
+.clear {
+  clear: both;
+}
+p {
+  margin: 0 0 var(--small-skip) 0;
+}
+p.title {
+  margin: 0;
+}
+ul, ol {
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+blockquote {
+  margin: 0 0 var(--med-skip) var(--med-skip);
+  font-size: var(--small-font);
+}
+
+/* UP ARROW */
+#up {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  height: 2em;
+  width: 2em;
+  background-color: var(--nav-bg);
+  text-align: center;
+  border-radius: 50%;
+  line-height: 2em;
+}
+#up a {
+  vertical-align: middle;
+  text-decoration: none;
+  color: var(--name-col);
+  font-weight: bolder;
+  font-family: var(--ss-font);
+}
