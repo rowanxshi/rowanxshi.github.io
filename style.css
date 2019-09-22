@@ -1,6 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Noto+Serif);
 @import url(//fonts.googleapis.com/css?family=Domine);
-@import url(//fonts.googleapis.com/css?family=Lato);
+@import url(//fonts.googleapis.com/css?family=Assistant);
 
 :root {
   /* DESIGN ELEMENTS */
@@ -20,9 +20,10 @@
   --body-col: rgb(115,115,115);
 
   /* FONT FACES */
+  --ss-font: 'Assistant';
   --serif-font: 'Noto Serif';
-  --ss-font: 'Lato';
-  --heading-font: 'Domine';
+  --name-font: 'Domine';
+  --body-font: var(--ss-font);
 
   /* FONT SIZES */
   --font-size: 16pt;
@@ -46,7 +47,7 @@ html {
   background-color: var(--header-bg);
 }
 .name {
-  font: bold 3em/1em var(--heading-font);
+  font: bold 3em/1em var(--name-font);
   letter-spacing: .25em;
   color: var(--name-col);
   padding-top: var(--med-skip);
@@ -72,7 +73,7 @@ html {
 
 /* BODY */
 body {
-  font: var(--font-size) var(--serif-font);
+  font: var(--font-size) var(--body-font);
   margin: 0px;
   background-color: var(--body-bg);
   color: var(--body-col);
@@ -101,7 +102,7 @@ a {
 }
 /* HEADINGS */
 .section {
-  font: bold 1.5em/1em var(--heading-font);
+  font: bold 1.5em/1em var(--name-font);
   color: var(--header-bg);
   border-radius: var(--radius);
   background-color: var(--section-bg);
@@ -117,6 +118,7 @@ p {
 }
 p.title {
   margin: 0;
+  font-family: var(--serif-font);
 }
 ul, ol {
   margin: 0;
