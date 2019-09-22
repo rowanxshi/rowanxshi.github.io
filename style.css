@@ -21,7 +21,6 @@
 
   /* FONT SIZES */
   --font-size: 16pt;
-  --small-font: 0.9em;
 
   /* SPACING */
   --small-skip: 0.5em;
@@ -119,7 +118,6 @@ ul, ol {
 }
 blockquote {
   margin: 0 0 var(--med-skip) var(--med-skip);
-  /* font-size: var(--small-font); */
 }
 
 /* UP ARROW */
