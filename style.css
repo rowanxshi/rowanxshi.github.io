@@ -94,7 +94,7 @@ a {
   max-width: 15em;
   float: left;
   display: inline-block;
-  margin: 0 1.5em var(--small-skip) 0;
+  margin: 0 2em var(--small-skip) 0;
   padding: 0;
   border-radius: var(--radius);
   width: 100%;
