@@ -1,9 +1,10 @@
 :root {
   /* DESIGN ELEMENTS */
-  --body-bg: rgb(255,240,245);
+  --body-bg: rgb(255,245,250);
   --header-bg: rgb(50,50,100);
   --nav-bg: rgb(155,155,205);
-  --shadow-col:  rgb(255,205,155);
+  --shadow-bg: rgb(255,205,155);
+  --section-bg: rgb(230,220,225);
   /* --header-bg: rgb(153,102,102); */
   /* --nav-bg: rgb(204,153,153); */
 
@@ -19,7 +20,7 @@
   --heading-font: 'Domine';
 
   /* FONT SIZES */
-  --font-size: 14pt;
+  --font-size: 16pt;
   --small-font: 0.9em;
 
   /* SPACING */
@@ -70,9 +71,10 @@ body {
   margin: 0px;
   background-color: var(--body-bg);
   color: var(--body-col);
+  line-height: 1.5em;
 }
 #container {
-  max-width: 37em;
+  max-width: 45em;
   margin: 2em auto 5em auto;
   padding-left: 3em;
   padding-right: 3em;
@@ -88,15 +90,17 @@ a {
   display: inline-block;
   margin: 0 1.5em var(--small-skip) 0;
   padding: 0;
+  border-radius: .15em;
   width: 100%;
-  box-shadow: var(--small-skip) var(--small-skip) var(--shadow-col);
+  box-shadow: var(--small-skip) var(--small-skip) var(--shadow-bg);
 }
 /* HEADINGS */
-h2 {
-  font-size: bold 1.5em/1em var(--heading-font);
+.section {
+  font: bold 1.5em/1em var(--heading-font);
   color: var(--header-bg);
-  border-bottom: 2px dotted var(--nav-bg);
-  padding-left: var(--small-skip);
+  border-radius: .15em;
+  background-color: var(--section-bg);
+  padding: 0.25em 0 0.25em var(--small-skip);
   margin: var(--med-skip) 0 var(--small-skip) 0;
 }
 /* TEXT */
@@ -115,7 +119,7 @@ ul, ol {
 }
 blockquote {
   margin: 0 0 var(--med-skip) var(--med-skip);
-  font-size: var(--small-font);
+  /* font-size: var(--small-font); */
 }
 
 /* UP ARROW */
