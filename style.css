@@ -27,7 +27,7 @@
 
   /* FONT SIZES */
   --font-size: 16pt;
-  --small-font: 0.9em;
+  --small-font: 0.85em;
 
   /* SPACING */
   --small-skip: 0.5em;
@@ -116,7 +116,7 @@ a {
 p {
   margin: 0 0 var(--small-skip) 0;
 }
-p.title {
+.title {
   margin: 0;
   font-family: var(--serif-font);
 }
