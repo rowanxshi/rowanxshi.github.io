@@ -2,6 +2,18 @@
 @import url(//fonts.googleapis.com/css?family=Domine);
 @import url(//fonts.googleapis.com/css?family=Assistant);
 
+@media only screen and (max-width: 480px) {
+  :root {
+    --font-size: 24pt;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  :root {
+    --font-size: 16pt;
+  }
+}
+
 :root {
   /* DESIGN ELEMENTS */
   --body-bg: rgb(255,245,250);
@@ -26,7 +38,7 @@
   --body-font: var(--ss-font);
 
   /* FONT SIZES */
-  --font-size: 16pt;
+  /* --font-size: 16pt; */
   --small-font: 0.85em;
 
   /* SPACING */
