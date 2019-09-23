@@ -121,6 +121,7 @@ a {
   background-color: var(--section-bg);
   padding: 0.25em 0 0.25em var(--small-skip);
   margin: var(--med-skip) 0 var(--small-skip) 0;
+  border-left: .1em solid var(--header-bg);
 }
 /* TEXT */
 .clear {
