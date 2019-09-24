@@ -1,6 +1,6 @@
-@import url(//fonts.googleapis.com/css?family=Noto+Serif);
+/* @import url(//fonts.googleapis.com/css?family=Noto+Serif);
 @import url(//fonts.googleapis.com/css?family=Domine);
-@import url(//fonts.googleapis.com/css?family=Assistant);
+@import url(//fonts.googleapis.com/css?family=Assistant); */
 
 body, html {
   font-family: 'Assistant';
@@ -28,7 +28,7 @@ p {
 #header {
   overflow: visible;
   position: relative;
-  padding-top: 6em;
+  padding-top: 5.5em;
 }
 #name {
   font-family: 'Domine';
@@ -50,7 +50,7 @@ p {
 
 /* BODY SECTION */
 #main {
-  line-height: 1.35em;
+  line-height: 1.25em;
   clear: both;
   padding-bottom: 6em;
 }
