@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Noto+Serif);
 @import url(//fonts.googleapis.com/css?family=Domine);
 @import url(//fonts.googleapis.com/css?family=Assistant);
+@import url(//fonts.googleapis.com/css?family=Inconsolata);
 
 html {
   max-width: 47.5em;
@@ -12,6 +13,10 @@ body, p {
   margin: 0;
   padding: 0;
   font: 11pt 'Noto Serif';
+}
+
+a {
+  font-family: 'Cousine';
 }
 
 h1 {
@@ -30,7 +35,6 @@ hr {
 }
 
 #contact {
-  font-size: 0.75em;
   text-align: center;
 }
 
