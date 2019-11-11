@@ -2,6 +2,9 @@
 @import url(//fonts.googleapis.com/css?family=Domine);
 @import url(//fonts.googleapis.com/css?family=Assistant);
 
+html {
+  padding: 0 3em 0 3em;
+}
 body, html {
   font-family: 'Assistant';
   font-size: 12pt;
