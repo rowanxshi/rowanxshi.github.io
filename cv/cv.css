@@ -1,6 +1,6 @@
-@import url(//fonts.googleapis.com/css?family=Noto+Serif);
+/* @import url(//fonts.googleapis.com/css?family=Noto+Serif);
 @import url(//fonts.googleapis.com/css?family=Domine);
-@import url(//fonts.googleapis.com/css?family=Assistant);
+@import url(//fonts.googleapis.com/css?family=Assistant); */
 
 html{
   padding: 0 3em 0 3em;
@@ -67,9 +67,9 @@ h2 {
   letter-spacing: 0.1em;
 }
 .section {
-  padding: 0.3em 0.3em 0.3em 0.5em;
   margin-bottom: 0.25em;
   margin-top: 1.5em;
+  padding: 0.3em 0.3em 0.3em 0.5em;
   background-color: rgb(240, 240, 240);
   border-radius: 0.25em;
   border-left: .1em solid dimgrey;
