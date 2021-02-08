@@ -187,7 +187,7 @@ p {
   margin: 0 0 var(--big-skip) 0;
 }
 .title {
-  margin: 0;
+/*   margin: 0; */
 }
 ul, ol {
   margin: 0;
