@@ -1,11 +1,10 @@
 <html>
 <head>
 	<link href="academic.css" rel="stylesheet" type="text/css" media="all">
-  <link href="academic.css" rel="stylesheet" type="text/css" media="all">
-  <!-- <link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Assistant' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Assistant' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cousine' rel='stylesheet' type='text/css'> 
 </head>
 
 <body>
@@ -42,17 +41,15 @@
 <h2>Education</h2>
 <p class=right>2014&ndash;2020</p>
 <p><i>PhD in Economics</i>, Princeton University</p>
-<p class=more>Thesis title: Heterogeneous Firms in International Trade </a></p>
+<p class=more>Thesis title: International trade with heterogeneous firms and reallocation</a></p>
 
 <p class=right>2009&ndash;2014</p>
 <p><i>BA in Mathematics and Economics</i>, University of California, Berkeley</p>
 <p class=more>Highest Honors in Economics, Distinction in General Scholarship</p>
 
 <h2>Working papers</h2>
-<div class=right>with Costas Arkolakis, Fabien Eckert</div>
-<p><i><a href="http://rowanxshi.github.io/papers/cdc.pdf">Combinatorial discrete choice</a></i></p>
 <div class=right>with Kathleen Hu</div>
-<p><i><a href="http://rowanxshi.github.io/papers/rshi_jmp.pdf">Solving combinatorial discrete choices in heterogeneous agent models: theory and an application to corporate tax harmonization in the European Union</a></i></p>
+<p><i><a href="http://rowanxshi.github.io/rshi_jmp.pdf">Solving combinatorial discrete choices in heterogeneous agent models: theory and an application to corporate tax harmonization in the European Union</a></i></p>
 <!--
 <p class=more>This paper develops a solution method for computing optimal decisions to combinatorial discrete choice problems (CDCPs) in heterogeneous agent settings. With an arbitrary type distribution over any number of differentiated characteristics, it quickly computes the policy <i>function</i> mapping the entire type space to corresponding optimal actions. The binary decisions can display either supermodular or submodular interactions. Problems of this structure arise naturally in economic settings, especially in international trade and industrial organization. The proposed algorithm is particularly well suited for estimating or computing general equilibrium models incorporating heterogeneous agents solving CDCPs, including choices on plant locations, input sourcing partners, or export market entry. As an illustration of the algorithm in practice, the paper then turns to evaluating the effects of a counterfactual policy equalizing corporate tax rates across the European Union using a quantitative general equilibrium model where heterogeneous firms optimally select a set of countries in which to operate affiliates.
 -->
@@ -64,6 +61,8 @@
 <!-- <p class=more>The European Union features a deeply integrated market, notably with free trade and free movement of people. On the other hand, member states still independently set many policies, including corporate tax rates. Low-tax countries such as Romania could be attractive locations for production, given this combination of policies. Goods produced there could be later shipped widely within the EU tariff-free, while profits are taxed at a low rate. However, low-tax countries also tend to be lower in several measures of productivity, sparking a narrative that they rely precisely on low tax rates to attract economic activity. Large high-tax countries like France and Germany have pushed for EU-wide tax rate equalization in response. We evaluate the effects of such a policy using a quantitative spatial model with heterogeneous firms, where multinational activity arises endogenously as firms choose an optimal set of countries in which to produce. This firm decision is a combinatorial discrete choice problem, where a naive solution method is computationally infeasible. A main contribution of this paper is devising a numerical algorithm which solves for the firm's policy function quickly and robustly over the entire range of firm productivity levels. We find that the tax rate generating the same level of EU-wide tax revenue is 27.26%. The country-level variation introduces a menu of production locations, where firms trade off a low tax burden with productive considerations. When taxes are instead the same in each country, firms choose affiliate locations only for productivity reasons. As a result, we find that the harmonization policy increases total output by 0.38%. This aggregate response masks large distributional consequences, with large countries experiencing net job creation and higher real wages. For example, the real wage in France would increase by almost 1% and there would be 10% more firms. On the other hand, a mirror effect occurs in small countries with formerly low rates. The number of firms in Romania decreases by around 18%, with real wages falling around 1.5%.</p> -->
 
 <h2>Works in progress</h2>
+<div class=right>with Costas Arkolakis, Fabien Eckert</div>
+<p><i>Combinatorial discrete choice</i></p>
 <div class=right>with Rafael Parente</div>
 <p><i>Brazil's import liberalization and reallocation in its non-traded sector</i></p>
 <!-- <p class=more>During the 1990s, the Brazillian government unexpectedly and quickly implemented tariff cuts for most imported products. This paper examines the liberalization's differential effect on within-sector industry reallocation across local labor markets. To do so, I use administrative panel data to follow firms through the period when the policy was enacted. In particular, I document that in areas more exposed to the trade shock, resulting import competition had relatively larger negative effects on small establishments compared to large ones. Small establishments were more likely to contract or exit compared to their large counterparts, in both traded and non-traded industries. In fact, the estimated effect is positive for the largest plants. In other words, plants with over 500 employees in more exposed areas were more likely to survive and expand than those in less exposed areas. In traded industries, the total effect was negative, leading to 2 million fewer jobs on net. However, in non-traded industries, the total effect was positive, implying 1 million new jobs on net. This result also suggests new sources of gains from trade, if within-industry reallocation from small plants to large plants implies sectoral productivity improvement.</p> -->
@@ -81,6 +80,8 @@
 <p><i>Professor</i>, Advanced topics in international trade</p>
 <p class=right>2020&ndash;</p>
 <p><i>Professor</i>, Mathematics for economics II</p>
+<p class=right>2018&ndash;2020</p>
+<p><i>Course organizer</i>, Introduction to microeconomics, Prof. Kelly Noonan</p>
 <p class=right>2018&ndash;2020</p>
 <p><i>Course organizer</i>, Introduction to microeconomics, Prof. Kelly Noonan</p>
 <p class=right>2019</p>
@@ -104,5 +105,5 @@
 </body>
 </html>
 <!--
-wkhtmltopdf --enable-local-file-access -L 0in -R 0in -B 0.75in -T 0.75in -s Letter academic.html academic.pdf
+wkhtmltopdf -L 0in -R 0in -B 0.75in -T 0.75in -s Letter academic.html academic.pdf
 -->
