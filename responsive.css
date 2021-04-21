@@ -138,17 +138,17 @@ label {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	padding: 0.5rem;
+	padding: 0.65rem;
 	margin: 0.75rem;
 	line-height: 0.75rem;
 	background-image: linear-gradient(to right, var(--header-bg), var(--header-bg) 50%, var(--nav-bg) 50%, var(--nav-bg));
 	border-radius: 50%;
 }
 #theme-toggle {
-	border: 2px var(--header-bg) solid;
+	border: 3px var(--header-bg) solid;
 }
 #dark-light:checked ~ #theme-toggle {
-	border: 2px var(--nav-bg) solid;
+	border: 3px var(--nav-bg) solid;
 }
 #page{
 	--body-bg: rgb(255,245,250);
