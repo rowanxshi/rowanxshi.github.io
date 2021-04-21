@@ -174,7 +174,7 @@ label {
 	padding: var(--small-skip);
 	margin: 0 auto 200vh auto;
 	max-width: 45rem;
-	max-height: calc(100vh - var(--big-skip));
+	max-height: calc(100vh - var(--med-skip));
 	padding-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
 	margin-top: calc(0 - var(--header-height) - 2*var(--small-skip) - 5px - var(--med-skip));
 	overflow-y: auto;
