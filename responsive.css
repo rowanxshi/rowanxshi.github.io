@@ -154,6 +154,11 @@ nav ul li a {
 
 #content a {
 	color: var(--link-col);
+	transition: 0.5s opacity;
+}
+
+#content a:hover {
+	opacity: 0.5;
 }
 
 /* PHOTO */
