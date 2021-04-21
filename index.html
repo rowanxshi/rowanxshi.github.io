@@ -11,29 +11,45 @@
 	<header>
 		<div class=header-container>
 			<div id=name>Rowan Shi</div>
-			<input type=checkbox id=checkbox>
+			<input type=checkbox id=menu-open hidden>
 			<nav>
 				<ul>
-					<li><a href="index.html">home</a></li>
-					<li><a href=research.html>research</a></li>
+					<li><a href="#home">home</a></li>
+					<li><a href="#research">research</a></li>
 				</ul>
 			</nav>
-			<label for=checkbox>
+			<label for=menu-open>
 				<div id=click-icon><hr></hr></div>
 			</label>
 		</div>
 	</header>
 	
-	<div id=content>
-	  <img id="photo" src="photo.jpg">
-	  <p>I am an Assistant Professor of Economics at Ryerson University in Toronto, Canada.</p>
-	  <div class="section">research interests</div>
-	  <p>International trade, urban/spatial economics, computational methods</p>
-	  <div class="section">contact</div>
-	  <p><b>E-mail</b>: <a href="mailto:rowanxshi@ryerson.ca">rowanxshi@ryerson.ca</a><br>
-	  <b>GitHub</b>: <a href="http://www.github.com/rowanxshi">rowanxshi</a><br>
-	  <b>CV</b>: <a href="cv/academic.html">web</a> or <a href="cv/academic.pdf">PDF</a></p>
-	  <div class=clear></div>
+	<input type=checkbox id=dark-light hidden>
+	<label id=theme-toggle for=dark-light></label>
+
+	<div id=page>
+		<a name=home class=anchor></a>
+		<div class=content>
+		  <img id="photo" src="photo.jpg">
+		  <p>I am an Assistant Professor of Economics at Ryerson University in Toronto, Canada.</p>
+		  <div class="section">research interests</div>
+		  <p>International trade, urban/spatial economics, computational methods</p>
+		  <div class="section">contact</div>
+		  <p><b>E-mail</b>: <a href="mailto:rowanxshi@ryerson.ca">rowanxshi@ryerson.ca</a><br>
+		  <b>GitHub</b>: <a href="http://www.github.com/rowanxshi">rowanxshi</a><br>
+		  <b>CV</b>: <a href="cv/academic.html">web</a> or <a href="cv/academic.pdf">PDF</a></p>
+		  <div class=clear></div>
+		</div>
+		
+		<a name=research class=anchor></a>
+		<div class=content>
+			<div class="section">working papers</div>
+			<p class="title"><b><a href="papers/cdc.pdf">Combinatorial discrete choice</a></b>, with Costas Arkolakis, Fabian Eckert</p> 
+			<p class="title"><b><a href="papers/rshi_jmp.pdf">Solving combinatorial discrete choice problems in heterogeneous agent models: theory and an application to corporate tax harmonization in the European Union</a></b>, with Kathleen Hu</p> 
+			<div class="section">works in progress</div>
+			<p class="title"><b>Brazil's tariff cuts and jobs in its nontraded sector</b></p>
+			<div class=clear></div>
+		</div>
 	</div>
 </body>
 </html>
