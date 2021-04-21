@@ -149,7 +149,7 @@ nav ul li a {
 	z-index: -1;
 	padding: var(--small-skip);
 	max-width: 45rem;
-	margin: calc(var(--header-height) + 2*var(--small-skip) + var(--med-skip)) auto 0 auto;
+	margin: calc(var(--header-height) + 2*var(--small-skip) + var(--big-skip)) auto 0 auto;
 }
 
 #content a {
