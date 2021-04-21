@@ -115,7 +115,7 @@ label {
 	transition: all 0.5s;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 40rem) {
 	#click-icon {
 		display: none;
 	}
@@ -134,7 +134,7 @@ label {
 		padding: 0 var(--small-skip) 0 var(--med-skip);
 	}
 }
-#page, .anchor {
+#page {
 	padding-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
 }
 #theme-toggle{
@@ -179,6 +179,7 @@ label {
 	max-height: calc(100vh - var(--header-height) - 2*var(--small-skip) - 5px - 2*var(--big-skip));
 	margin: 0 auto 100vh auto;
 	overflow-y: auto;
+	scroll-margin-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
 }
 
 .content a {
@@ -192,7 +193,7 @@ label {
 
 /* PHOTO */
 #photo {
-  width: 15rem;
+  width: 12rem;
   max-width: calc(100% - 2*var(--small-skip));
   float: left;
   display: inline-block;
@@ -208,7 +209,7 @@ label {
   border-radius: var(--radius);
   background-color: var(--accent-col);
   padding: 0.25rem 0 0.25rem var(--small-skip);
-  margin: var(--med-skip) 0 var(--small-skip) 0;
+  margin: 0 0 var(--small-skip) 0;
   border-left: .1rem solid var(--header-bg);
   display: flex;
 }
@@ -219,9 +220,6 @@ label {
 }
 p {
   margin: 0 0 var(--big-skip) 0;
-}
-.title {
-/*   margin: 0; */
 }
 ul, ol {
   margin: 0;
