@@ -134,9 +134,6 @@ label {
 		padding: 0 var(--small-skip) 0 var(--med-skip);
 	}
 }
-#page {
-	padding-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
-}
 #theme-toggle{
 	position: fixed;
 	bottom: 0;
@@ -175,11 +172,12 @@ label {
 
 .content {
 	padding: var(--small-skip);
+	margin: 0 auto 200vh auto;
 	max-width: 45rem;
-	max-height: calc(100vh - var(--header-height) - 2*var(--small-skip) - 5px - 2*var(--big-skip));
-	margin: 0 auto 100vh auto;
+	max-height: calc(100vh - var(--big-skip));
+	padding-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
+	margin-top: calc(0 - var(--header-height) - 2*var(--small-skip) - 5px - var(--med-skip));
 	overflow-y: auto;
-	scroll-margin-top: calc(var(--header-height) + 2*var(--small-skip) + 5px + var(--big-skip));
 }
 
 .content a {
