@@ -24,7 +24,7 @@
 	--small-skip: 0.5rem;
 	--med-skip: 1rem;
 	--big-skip: 2rem;
-	--header-height: calc(var(--header-lineheight) + 2*var(--small-skip));
+	--header-height: calc(5px + var(--header-lineheight) + 2*var(--small-skip));
 	
 	margin: 0;
 	padding: 0;
@@ -181,7 +181,7 @@ main {
 	background-color: var(--body-bg);
 	color: var(--body-col);
 	scroll-margin-top: var(--header-height);
-	padding: var(--big-skip) calc(max(var(--med-skip), 50vw - 0.5*45rem));
+	padding: var(--big-skip) calc(max(var(--med-skip), 50vw - 0.5*35rem));
 }
 .content:nth-of-type(even) {
 	background-color: var(--body-bg2);
