@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo');
+@import url('https://fonts.googleapis.com/css2?family=Assistant');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif');
+
 * {
 	/* DESIGN ELEMENTS */
 	--header-bg: rgb(50,50,100);
@@ -7,11 +11,12 @@
 	/* TEXT COLOURS */
 	--name-col: rgb(175,175,210);
 	--nav-col: var(--name-col);
+	--section-col: var(--header-bg);
 	
 	/* FONT FACES */
 	--ss-font: 'Assistant';
 	--serif-font: 'Noto Serif';
-	--name-font: var(--ss-font);
+	--name-font: 'Chivo';
 	--body-font: var(--ss-font);
 	
 	/* FONT SIZES */
@@ -39,10 +44,6 @@ html {
 
 body {
 	font-family: var(--body-font);
-}
-
-a {
-	text-decoration: none;
 }
 
 label {
@@ -100,6 +101,7 @@ nav ul li a {
 	display: inline-block;
 	color: var(--nav-col);
 	font-size: var(--small-font);
+	text-decoration: none;
 }
 #hamburger {
 	width: 1.25rem;
@@ -142,17 +144,14 @@ nav ul li a {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	padding: 0.65rem;
 	margin: 0.75rem;
-	line-height: 0.75rem;
+	width: 1.5rem;
+	height: 1.5rem;
 	background-image: linear-gradient(to right, var(--header-bg), var(--header-bg) 50%, var(--nav-bg) 50%, var(--nav-bg));
 	border-radius: 50%;
+	border: 3px var(--nav-bg) solid;
 }
 #theme-toggle {
-	border: 3px var(--header-bg) solid;
-}
-#dark-light:checked + #theme-toggle {
-	border: 3px var(--nav-bg) solid;
 }
 #dark-light:not(:checked) ~ main {
 	--body-bg: rgb(25,20,35);
@@ -166,7 +165,7 @@ nav ul li a {
 	--body-bg2: rgb(255,225,210, 0.75);
 	--body-col: rgb(100,100,100);
 	--link-col: rgb(115,115,225);
-	--accent-col: rgb(148,82,74, 0.35);
+	--accent-col: rgb(150,80,75,0.35);
 }
 
 /* -- CONTENT -- */
@@ -210,12 +209,12 @@ main {
 /* --- headings */
 .section {
   font: bold 1rem/1rem var(--serif-font);
-  color: var(--header-bg);
+  color: var(--section-col);
   border-radius: var(--radius);
   background-color: var(--accent-col);
   padding: 0.25rem 0 0.25rem var(--small-skip);
   margin: 0 0 var(--small-skip) 0;
-  border-left: .1rem solid var(--header-bg);
+  border-left: .1rem solid var(--section-col);
   display: flex;
   letter-spacing: 0.05rem;
 }
