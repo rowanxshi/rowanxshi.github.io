@@ -233,16 +233,12 @@ ul, ol {
   margin: 0;
   padding: 0 0 0 1rem;
 }
-p ~ ul, p ~ ol, p ~ blockquote {
+p ~ ul, p ~ ol, p ~ details {
 	margin-top: calc(0rem - var(--big-skip));
 }
-blockquote {
-	quotes: "►""""►""";
-}
-blockquote::before {
-	content: open-quote;
-	margin-right: var(--small-skip);
-}
-.extra {
+.extra, details {
 	font-size: 0.75rem;
+}
+summary {
+	cursor: pointer;
 }
