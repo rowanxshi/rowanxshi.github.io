@@ -11,7 +11,7 @@
 	/* FONT FACES */
 	--ss-font: 'Assistant';
 	--serif-font: 'Noto Serif';
-	--section-font: 'Domine';
+	--name-font: var(--ss-font);
 	--body-font: var(--ss-font);
 	
 	/* FONT SIZES */
@@ -70,11 +70,10 @@ header {
 }
 
 #name {
-	font-family: var(--ss-font);
+	font-family: var(--name-font);
 	color: var(--name-col);
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.15rem;
 	white-space: nowrap;
-	padding-left: var(--med-skip);
 }
 
 /* --- narrow-window hamburger nav */
@@ -134,8 +133,7 @@ nav ul li a {
 	}
 	nav ul li {
 		display: inline;
-		margin: 0 0 0 var(--small-skip);
-		padding: 0 var(--small-skip) 0 var(--med-skip);
+		padding-left: var(--med-skip);
 	}
 }
 
@@ -219,6 +217,7 @@ main {
   margin: 0 0 var(--small-skip) 0;
   border-left: .1rem solid var(--header-bg);
   display: flex;
+  letter-spacing: 0.05rem;
 }
 
 /* --- text */
@@ -234,4 +233,17 @@ p {
 ul, ol {
   margin: 0;
   padding: 0 0 0 1rem;
+}
+p ~ ul, p ~ ol, p ~ blockquote {
+	margin-top: calc(0rem - var(--big-skip));
+}
+blockquote {
+	quotes: "►""""►""";
+}
+blockquote::before {
+	content: open-quote;
+	margin-right: var(--small-skip);
+}
+.extra {
+	font-size: 0.75rem;
 }
