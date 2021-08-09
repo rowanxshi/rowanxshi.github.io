@@ -5,12 +5,12 @@
 * {
 	/* DESIGN ELEMENTS */
 	--header-bg: rgb(50,50,100);
-	--nav-bg: rgb(145,145,195);
+	--nav-bg: rgba(145,145,195,0.85);
 	--radius: 0.25rem;
 	
 	/* TEXT COLOURS */
 	--name-col: rgb(175,175,210);
-	--nav-col: var(--name-col);
+	--nav-col: var(--header-bg);
 	--section-col: var(--header-bg);
 	
 	/* FONT FACES */
@@ -60,12 +60,7 @@ header {
 	width: 100%;
 	height: var(--header-height);
 	padding: var(--small-skip) var(--med-skip);
-	border-bottom: solid 5px var(--nav-bg);
-}
-
-.header-container {
-	display: flex;
-	justify-content: space-between;
+	border-bottom: solid 5px var(--name-col);
 	font-size: var(--header-size);
 	line-height: var(--header-lineheight);
 }
@@ -78,42 +73,41 @@ header {
 }
 
 /* --- narrow-window hamburger nav */
-#menu-open:checked ~ nav ul {
-	max-height: 15rem;
-	padding: 0.25rem 0;
-	transition: all 0.5s;
+#menu-open:checked ~ nav {
+	transition: max-height 0.75s ease-in;
+	max-height: 40rem;
 }
 nav {
 	background-color: var(--nav-bg);
 	position: absolute;
-	width: 100%;
+	right: 0;
 	top: var(--header-height);
-	left: 0;
-}
-nav ul {
-	list-style-type: none;
+	width: 100%;
 	max-height: 0;
 	overflow: hidden;
 	text-align: center;
+	padding: 0;
 }
-nav ul li a {
-	padding-bottom: 0.5rem;
-	display: inline-block;
+nav a {
 	color: var(--nav-col);
 	font-size: var(--small-font);
 	text-decoration: none;
+	display: block;
 }
-#hamburger {
-	width: 1.25rem;
-	height: 1.25rem;
-	position: relative;
+label[for=menu-open] {
+	position: absolute;
+	right: var(--med-skip);
 	top: 50%;
 	transform: translateY(-50%);
-	border-top: 0.25rem solid var(--nav-col);
-	border-bottom: 0.25rem solid var(--nav-col);
+} 
+#hamburger {
+	width: 1.25rem;
+	height: calc(var(--header-size) - 2*0.2rem);
+	border-top: 0.2rem solid var(--name-col);
+	border-bottom: 0.2rem solid var(--name-col);
 }
 #hamburger hr {
-	border: 0.125rem solid var(--nav-col);
+	border: 0.1rem solid var(--name-col);
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -121,21 +115,20 @@ nav ul li a {
 
 /* --- wide-window full nav */
 @media (min-width: 40rem) {
-	header label {
+	label[for=menu-open] {
 		display: none;
 	}
 	nav {
-		position: relative;
-		top: 0;
 		background-color: transparent;
-	}
-	nav ul {
-		text-align: right;
+		position: revert;
+		float: right;
+		width: auto;
 		max-height: var(--header-lineheight);
 	}
-	nav ul li {
-		display: inline;
+	nav a {
 		padding-left: var(--med-skip);
+		display: inline;
+		color: var(--name-col);
 	}
 }
 
@@ -147,11 +140,9 @@ nav ul li a {
 	margin: 0.75rem;
 	width: 1.5rem;
 	height: 1.5rem;
-	background-image: linear-gradient(to right, var(--header-bg), var(--header-bg) 50%, var(--nav-bg) 50%, var(--nav-bg));
+	background-image: linear-gradient(to right, var(--header-bg), var(--header-bg) 50%, var(--name-col) 50%, var(--name-col));
 	border-radius: 50%;
-	border: 3px var(--nav-bg) solid;
-}
-#theme-toggle {
+	border: 3px var(--name-col) solid;
 }
 #dark-light:not(:checked) ~ main {
 	--body-bg: rgb(25,20,35);
