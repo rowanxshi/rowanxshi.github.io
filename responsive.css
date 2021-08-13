@@ -65,6 +65,13 @@ header {
 	line-height: var(--header-lineheight);
 }
 
+#header-container {
+	height: 100%;
+	width: 100%;
+	max-width: 35rem;
+	margin: 0 auto;
+}
+
 #name {
 	font-family: var(--name-font);
 	color: var(--name-col);
@@ -148,15 +155,15 @@ label[for=menu-open] {
 	--body-bg: rgb(25,20,35);
 	--body-bg2: rgb(25,20,35,0.95);
 	--body-col: rgb(175,175,210);
-	--link-col: rgb(202, 149, 2);
+	--link-col: rgb(225,125,165);
 	--accent-col: var(--body-col);
 }
 #dark-light:checked ~ main {
-	--body-bg: rgb(255,225,210);
-	--body-bg2: rgb(255,225,210, 0.75);
-	--body-col: rgb(100,100,100);
+	--body-bg: rgb(255,220,230, 0.85);
+	--body-bg2: rgb(255,220,230, 0.65);
+	--body-col: rgb(50,75,115);
 	--link-col: rgb(115,115,225);
-	--accent-col: rgb(150,80,75,0.35);
+	--accent-col: var(--name-col);
 }
 
 /* -- CONTENT -- */
@@ -171,9 +178,11 @@ main {
 	scroll-margin-top: var(--header-height);
 	padding: var(--big-skip) calc(max(var(--med-skip), 50vw - 0.5*35rem));
 }
+
 .content:nth-of-type(even) {
 	background-color: var(--body-bg2);
 }
+
 .content:last-of-type {
 	min-height: calc(100vh - var(--header-height));
 }
@@ -214,22 +223,28 @@ main {
 .clear {
   clear: both;
 }
+
 p {
   margin: 0 0 var(--big-skip) 0;
 }
+
 .content p:last-of-type {
 	margin-bottom: 0;
 }
+
 ul, ol {
   margin: 0;
   padding: 0 0 0 1rem;
 }
+
 p ~ ul, p ~ ol, p ~ details {
 	margin-top: calc(0rem - var(--big-skip));
 }
+
 .extra, details {
 	font-size: 0.75rem;
 }
+
 summary {
 	cursor: pointer;
 }
