@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="responsive.css">
+	<title>Rowan Shi</title>
+</head>
+
+<body>
+	<header>
+		<div id=header-container>
+			<span id=name>Rowan Shi</span>
+			<input type=checkbox id=menu-open hidden></input>
+			<label for=menu-open>
+				<div id=hamburger><hr></hr></div>
+			</label>
+			<nav>
+				<a href="index.html#home">home</a>
+				<a href="index.html#research">research</a>
+			</nav>
+			<div class=clear></div>
+		</div>
+	</header>
+	
+	<input type=checkbox id=dark-light hidden>
+	<label id=theme-toggle for=dark-light><div id=toggle-inner></div></label>
+
+	<main id=blog>
+		<div class=content>
+			<div class=section>Contents</div>
+			<ul>
+				<li><a href=#package>Writing a package in Julia</a></li>
+			</ul>
+		</div>
+		<div class="content blog">
+			<a name=package></a>
+			<div class="section">Writing a package in Julia</div>
+			<p>In tandem with <a href="papers/cdc.pdf">one of my projects</a>, I wrote a Julia package implementing its central solution methods. This undertaking was the first time I wrote a Julia package (the larger project itself the firm time I really used Julia).</p>
+			
+			<p>Since I had never written a package in Julia (or indeed in any other language), it was a learning experience &mdash; especially for the under-the-hood processes with which software engineers are undoubtedly familiar: wrangling workflows; git and version control; packages and dependencies; documenting and testing. While I learned a lot, I will focus only on the mechanics of starting and developing a Julia package here. (Maybe more to come on the other topics later!)</p>
+			
+			<p>A package is <i>functionally</i> no different from any code project in the sense that it just runs code. <i>Conceptually</i>, they tend to be centred around building and making available a core set of functionalities for later use &mdash; hopefully by yourself, your collaborators, or even strangers trying to solve similar problems. For this reason, code for a package should be written in Julia <i>modules</i>, exporting only the key functionalities for later use.</p>
+			
+			<p>For brevity, I'll first list the basic steps to get a new package going, then discuss them in more detail.</p>
+			<ol>
+				<li>Open Julia, enter Pkg mode (by typing <code>]</code>).</li>
+				<li>Initiate your package, say "NewPackage", by typing <code>generate NewPackage</code>. Doing so will create a NewPackage folder in the current working directory.</li>
+				<li>Create a git repository at some online host like GitHub, probably called NewPackage.jl, and push the contents of the NewPackage folder.</li>
+				<li>NewPackage can now be added to Julia's default <i>environment</i> &mdash; tell Julia about it by typing something like <code>add https://github.com/rowanxshi/NewPackage.jl</code> in Pkg mode. Julia now knows to get NewPackage from the online git repository.</li>
+				<li>We probably want to make changes to NewPackage locally before publishing them online. In Pkg mode, type <code>dev NewPackage</code>. Julia will copy the package files for local development (usually somewhere like ~/.julia/dev/NewPackage), then tell the default environment to load NewPackage from this local version rather than the version hosted online.</li>
+				<li>We now have two local versions on the package: one we created with <code>generate</code> and one we created with <code>dev</code>. At this point, the first serves no purpose (it isn't being watched by Julia, for example) so we can delete it. I personally created a symbolic link from this location to the local development copy, since the original location was more convenient for my file management purposes.</li>
+				<li>Now, we can make any changes we want to the local copy. To incorporate the changes, update the package by typing something like <code>up NewPackage</code> in Pkg mode, then restart Julia. When satisfied with changes, commit and push them so they can be available for everyone from the online hosted location.</li>
+			</ol>
+			
+			<p>The process above is a bit convoluted. For me, the multiple copies (created with <code>generate</code> and <code>dev</code>) were very confusing. I am not sure if there is a way to get the balling rolling in a more efficient way in Julia, or if it's standard with other languages to create multiple local copies of a project during the initiation process.</p>
+			
+			<p>I'll close with a few final comments on the practicalities of package development.</p>
+			<ul>
+				<li><b><i>Dependencies.</i></b> Each time before working on the package, activate its environment by typing <code>activate .</code> in Pkg mode while in the package's directory. If done correctly, the Pkg prompt will switch to <code>(NewPackage) pkg></code> and track dependencies. For example, suppose the package relies on LinearAlgebra.jl. After activating the package's environment, typing <code>add LinearAlgebra</code> in Pkg mode means that Julia will automatically record that your package depends on LinearAlgebra. When others download your package, Julia will know to also download LinearAlgebra.</li>
+				<li><b><i>Prototyping.</i></b> I like using Pluto.jl to prototype small snippets of changes before directly editing the package contents. Its reactivity is a real convenience for quickly seeing whether ideas will work.</li>
+				<li><b><i>Revise.jl.</i></b> A package recommended by essentially everyone, it allows real-time updates to local packages rather than having to open a fresh Julia session to see changes reflected.</li>
+				<li><b><i>Testing.</i></b> Nearly every serious package has run tests to check its functionality. To test a package, write a "NewPackage/test/runtests.jl" file (creating the test directory if necessary). Then, you can ask Julia to run the runtests.jl file by typing <code>test NewPackage</code> in Pkg mode.</li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>
