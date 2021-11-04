@@ -33,11 +33,11 @@
 		</div>
 		<div class="content" id=package>
 			<div class="section">Writing a package in Julia</div>
-			<p>In tandem with <a href="papers/cdc.pdf">one of my projects</a>, I wrote a Julia package implementing its central solution methods. This undertaking was the first time I wrote a Julia package (the larger project itself the firm time I really used Julia).</p>
+			<p>In tandem with <a href="papers/cdc.pdf">one of my projects</a>, I wrote a <a href="https://github.com/rowanxshi/CDCP.jl">Julia package</a> implementing its central solution methods. This undertaking was the first time I wrote a Julia package (the larger project itself the first time I really used Julia).</p>
 			
 			<p>Since I had never written a package in Julia (or indeed in any other language), it was a learning experience &mdash; especially for the under-the-hood processes with which software engineers are undoubtedly familiar: wrangling workflows; git and version control; packages and dependencies; documenting and testing. While I learned a lot, I will focus only on the mechanics of starting and developing a Julia package here. (Maybe more to come on the other topics later!)</p>
 			
-			<p>A package is <i>functionally</i> no different from any code project in the sense that it just runs code. <i>Conceptually</i>, they tend to be centred around building and making available a core set of functionalities for later use &mdash; hopefully by yourself, your collaborators, or even strangers trying to solve similar problems. For this reason, code for a package should be written in Julia <i>modules</i>, exporting only the key functionalities for later use.</p>
+			<p>A package is <i>functionally</i> no different from any code project in the sense that it just runs code. <i>Conceptually</i>, packages tend to be centred around building and making available a core set of functionalities to use repeatedly &mdash; hopefully for yourself, your collaborators, or even strangers trying to solve similar problems. For this reason, code for a package should be written in Julia <i>modules</i>, exporting only the key functionalities for general use.</p>
 			
 			<p>For brevity, I'll first list the basic steps to get a new package going, then discuss them in more detail.</p>
 			<ol>
