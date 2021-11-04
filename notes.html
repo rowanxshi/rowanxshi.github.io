@@ -37,6 +37,9 @@
 			
 			<p>Since I had never written a package in Julia (or indeed in any other language), it was a learning experience &mdash; especially for the under-the-hood processes with which software engineers are undoubtedly familiar: wrangling workflows; git and version control; packages and dependencies; documenting and testing. While I learned a lot, I will focus only on the mechanics of starting and developing a Julia package here. (Maybe more to come on the other topics later!)</p>
 			
+			<p></p>
+			<details>
+			<summary>Read more</summary>
 			<p>A package is <i>functionally</i> no different from any code project in the sense that it just runs code. <i>Conceptually</i>, packages tend to be centred around building and making available a core set of functionalities to use repeatedly &mdash; hopefully for yourself, your collaborators, or even strangers trying to solve similar problems. For this reason, code for a package should be written in Julia <i>modules</i>, exporting only the key functionalities for general use.</p>
 			
 			<p>For brevity, I'll first list the basic steps to get a new package going, then discuss them in more detail.</p>
@@ -59,6 +62,7 @@
 				<li><b><i>Revise.jl.</i></b> A package recommended by essentially everyone, it allows real-time updates to local packages rather than having to open a fresh Julia session to see changes reflected.</li>
 				<li><b><i>Testing.</i></b> Nearly every serious package has run tests to check its functionality. To test a package, write a "NewPackage/test/runtests.jl" file (creating the test directory if necessary). Then, you can ask Julia to run the runtests.jl file by typing <code>test NewPackage</code> in Pkg mode.</li>
 			</ul>
+			</details>
 		</div>
 	</main>
 </body>

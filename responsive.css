@@ -22,7 +22,7 @@
 	--serif-font: 'Noto Serif';
 	--name-font: 'Chivo';
 	--body-font: var(--ss-font);
-	--code-font: 0.75rem/0.75rem 'JuliaMono-Regular', monospace;
+	--code-font: 0.75em/0.75em 'JuliaMono-Regular', monospace;
 	
 	/* FONT SIZES */
 	--header-size: 1.5rem;
@@ -235,6 +235,7 @@ main {
 p + p, .section {
   margin: var(--big-skip) 0 0 0;
 }
+#notes p + p { margin-top: var(--med-skip) }
 
 .extra, details {
 	font-size: 0.75rem;
