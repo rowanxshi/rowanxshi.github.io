@@ -1,0 +1,106 @@
+:root {
+	/* DESIGN ELEMENTS */
+	--main-hue: 260;
+	--body-bg: hsl(var(--main-hue), 25%, 10%);
+	--body-bg2: hsl(var(--main-hue), 25%, 15%);
+	
+	/* TEXT COLOURS */
+	--body: hsl(var(--main-hue), 50%, 90%);
+	--section: var(--header-bg);
+	--link: hsl(calc(var(--main-hue) + 90), 75%, 70%);
+	--accent: hsl(calc(var(--main-hue) + 90), 50%, 80%);
+	--accent2: hsl(var(--main-hue), 75%, 65%);
+	
+	--small-font: 0.85rem;
+	
+	/* FONT FACES */
+	--body-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	
+	/* SPACING */
+	--horz: 8px;
+	--tiny-skip: 0.25rem;
+	--small-skip: 0.5rem;
+	--med-skip: 1rem;
+	--big-skip: 2rem;
+}
+
+html, body, h1, h2, p {
+	margin: 0;
+	padding: 0;
+	color: var(--body);
+	line-height: 1.5rem;
+	scroll-behavior: smooth;
+	font-family: var(--body-font);
+}
+
+/* -- STRUCTURE -- */
+section, nav {
+	padding-left: calc(max(var(--horz), 50vw - 0.5*65ch));
+	padding-right: calc(max(var(--horz), 50vw - 0.5*65ch));
+}
+
+nav {
+	background-color: var(--body-bg);
+	padding-top: var(--tiny-skip);
+	padding-bottom: var(--tiny-skip);
+}
+
+section {
+	background-color: var(--body-bg);
+	padding-top: var(--big-skip);
+	padding-bottom: var(--big-skip);
+}
+
+section:nth-of-type(odd) {
+	background-color: var(--body-bg2);
+}
+
+section:last-of-type {
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+
+/* -- STYLE -- */
+h1, h2 {
+	margin-bottom: var(--med-skip);
+}
+	
+h1 {
+	font-size: 2em;
+	color: var(--accent);
+}
+h2 {
+	color: var(--accent2);
+	font-style: oblique;
+}
+
+h2, p + p, summary + p {
+	margin-top: var(--med-skip);
+}
+
+a {
+	color: var(--link);
+	transition: filter 0.25s ease-in-out;
+}
+
+a:hover {
+	filter: brightness(125%);
+}
+
+/* --- photo */
+#photo {
+	width: 12rem;
+	max-width: calc(100vw - 2*var(--horz));
+	float: right;
+	margin: 0 0 var(--med-skip) calc(2*var(--horz));
+	box-shadow: calc(-0.5*var(--horz)) calc(0.5*var(--horz)) var(--accent), calc(0.5*var(--horz)) calc(-0.5*var(--horz)) var(--accent2);
+}
+
+/* --- text */
+.clear {
+	clear: both;
+}
+
+.small, details { font-size: var(--small-font); }
+
+summary, label { cursor: pointer; }
