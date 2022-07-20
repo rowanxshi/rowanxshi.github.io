@@ -1,73 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif');
-@import url('https://fonts.googleapis.com/css2?family=Domine');
-@import url('https://fonts.googleapis.com/css2?family=Assistant');
-@import url('https://fonts.googleapis.com/css2?family=Cousine');
+* {
+	--bg: hsl(240, 50%, 10%);
+	--body: hsl(240, 50%, 90%);
+	--light: hsl(240, 75%, 80%);
+	--link: hsl(330, 75%, 65%);
+	
+	--top: 1rem;
+	--bottom: 3rem;
+}
 
 html {
-  max-width: 47.5em;
-  margin: 4em auto 4em auto;
-  padding: 0 3em 0 3em;
+	max-width: 45rem;
+	margin: 0 auto;
+	padding: 0 var(--horz);
+	padding-top: var(--top);
+	padding-bottom: var(--bottom);
+	background-color: var(--bg);
+	color: var(--body);
 }
 
-body, p {
-  margin: 0;
-  padding: 0;
-  font: 11pt 'Noto Serif';
+body, p, h1, h2, .right {
+	margin: 0;
+	padding: 0;
+	font-family: Baskerville;
+	font-family: var(--serif-fonts);
+	line-height: 1.25;
 }
 
-a {
-  font-family: 'Cousine';
-}
-
-i a {
-  font-family: 'Noto Serif';
-}
-
-h1 {
-  text-align: center;
-  margin: 0;
-  font: bold 2em 'Domine';
-  line-height: 1em;
-  letter-spacing: .1em;
-}
-
-hr {
-  border-top: 1px solid dimgrey;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+h1, h2 {
+	font-family: Helvetica Neue;
+	font-family: var(--ss-fonts);
 }
 
 #contact {
-  text-align: center;
+	font-family: Menlo;
+	font-family: var(--mono-fonts);
 }
 
-#main {
-  margin-bottom: 5em;
+hr {
+	border: none;
+	border-top: 1px solid var(--light);
 }
 
-#main p {
-  line-height: 1.5em;
+a, a:hover, a:visited, a:active {
+	color: var(--link);
+}
+
+h1, #contact {
+	text-align: center;
 }
 
 h2 {
-  font: 1.25em 'Assistant';
-  font-weight: bold;
-  margin: 1.5em 0 0.25em 0em;
-  line-height: 1em;
-  letter-spacing: .1em;
+	margin-top: 1em;
 }
 
 .right {
-  float: right;
-  text-align: right;
-  color: dimgrey;
-  width: auto;
-  margin: 0;
-  padding: 0;
+	float: right;
+	text-align: right;
+	color: var(--light);
+	width: auto;
 }
 
 .more {
-  margin: 0 0 0.25em 1.5em;
-  clear: both;
+	margin-left: 1.5em;
+	clear: both;
 }
+
