@@ -13,11 +13,7 @@
 	
 	--small-font: 0.85rem;
 	
-	/* FONT FACES */
-	--body-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-	
 	/* SPACING */
-	--horz: 8px;
 	--tiny-skip: 0.25rem;
 	--small-skip: 0.5rem;
 	--med-skip: 1rem;
@@ -30,7 +26,7 @@ html, body, h1, h2, p {
 	color: var(--body);
 	line-height: 1.5rem;
 	scroll-behavior: smooth;
-	font-family: var(--body-font);
+	font-family: var(--ss-fonts);
 }
 
 /* -- STRUCTURE -- */
@@ -80,11 +76,6 @@ h2, p + p, summary + p {
 
 a {
 	color: var(--link);
-	transition: filter 0.25s ease-in-out;
-}
-
-a:hover {
-	filter: brightness(125%);
 }
 
 /* --- photo */

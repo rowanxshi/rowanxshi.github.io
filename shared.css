@@ -1,0 +1,15 @@
+* {
+	--horz: 8px;
+	--ss-fonts: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+	--serif-fonts: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--mono-fonts: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+
+a { 
+	transition: filter 0.25s ease-in-out;
+}
+
+a:hover {
+	filter: brightness(125%);
+}
+
