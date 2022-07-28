@@ -19,7 +19,7 @@
 	--width: 65ch;
 }
 
-html, body, h1, h2, p {
+html, body, h1, h2, p, details + p.small {
 	margin: 0;
 	padding: 0;
 	color: var(--body);
@@ -69,7 +69,7 @@ h2 {
 	font-style: oblique;
 }
 
-h2, p + p, summary + p {
+h2, p + p, details + p {
 	margin-top: var(--med-skip);
 }
 
