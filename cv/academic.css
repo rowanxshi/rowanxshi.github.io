@@ -31,6 +31,9 @@ h1, h2 {
 	font-family: var(--ss-fonts);
 }
 
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.25em; }
+
 #contact {
 	font-family: Menlo;
 	font-family: var(--mono-fonts);
