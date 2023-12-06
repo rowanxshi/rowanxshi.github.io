@@ -1,70 +1,61 @@
-* {
-	--bg: hsl(240, 50%, 10%);
-	--body: hsl(240, 50%, 90%);
-	--light: hsl(240, 75%, 80%);
-	--link: hsl(330, 75%, 65%);
-	
-	--top: 1rem;
-	--bottom: 3rem;
-}
-
+/* printing to PDF doesn't interpret variables: first set it for PDF, then use variables for web */
 html {
 	max-width: 45rem;
 	margin: 0 auto;
-	padding: 0 var(--horz);
-	padding-top: var(--top);
-	padding-bottom: var(--bottom);
-	background-color: var(--bg);
-	color: var(--body);
+	padding: 0 8px;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	padding-top: var(--med-skip);
+	padding-bottom: var(--big-skip);
 }
 
-body, p, h1, h2, .right {
+body, p, h1, .right {
 	margin: 0;
 	padding: 0;
-	font-family: Baskerville;
+	font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	font-family: var(--serif-fonts);
 	line-height: 1.25;
 }
 
 h1, h2 {
-	font-family: Helvetica Neue;
+	font-family: helvetica neue;
 	font-family: var(--ss-fonts);
 }
 
-h1 { font-size: 1.75em; }
-h2 { font-size: 1.25em; }
+h1 {
+	font-size: 1.75em;
+}
+h2 {
+	font-size: 1.25em;
+	margin-top: 1rem;
+	margin-top: var(--med-skip);
+}
 
 #contact {
-	font-family: Menlo;
+	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 	font-family: var(--mono-fonts);
 }
 
 hr {
 	border: none;
-	border-top: 1px solid var(--light);
-}
-
-a, a:hover, a:visited, a:active {
-	color: var(--link);
+	border-top: 1px solid black;
+	border-top: 1px solid var(--tertiary);
 }
 
 h1, #contact {
 	text-align: center;
 }
 
-h2 {
-	margin-top: 1em;
-}
-
 .right {
 	float: right;
 	text-align: right;
-	color: var(--light);
+	color: var(--tertiary);
 	width: auto;
 }
 
 .more {
-	margin-left: 1.5em;
+	margin-left: 1rem;
+	margin-left: var(--med-skip);
 	clear: both;
 }
 

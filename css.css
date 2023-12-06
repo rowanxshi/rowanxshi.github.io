@@ -1,29 +1,10 @@
 :root {
-	--main-hue: 260;
 	--small-font: 0.85rem;
-	
-	/* COLOURS */
-	--body: hsl(var(--main-hue), 50%, 90%);
-	--section: var(--header-bg);
-	--link: hsl(calc(var(--main-hue) + 90), 75%, 70%);
-	--accent: hsl(calc(var(--main-hue) + 90), 50%, 80%);
-	--accent2: hsl(var(--main-hue), 75%, 65%);
-	--body-bg: hsl(var(--main-hue), 25%, 10%);
-	--body-bg2: hsl(var(--main-hue), 25%, 15%);
-	
-	/* LENGTHS */
-	--tiny-skip: 0.25rem;
-	--small-skip: 0.5rem;
-	--med-skip: 1rem;
-	--big-skip: 2rem;
-	--width: 65ch;
-	--line-height: 1.5rem;
 }
 
-html, body, h1, h2, p, details + p.small {
+html, body, h1, p, details + p.small {
 	margin: 0;
 	padding: 0;
-	color: var(--body);
 	line-height: var(--line-height);
 	scroll-behavior: smooth;
 	font-family: var(--ss-fonts);
@@ -31,22 +12,21 @@ html, body, h1, h2, p, details + p.small {
 
 /* -- STRUCTURE -- */
 section, nav {
-	padding-left: calc(max(var(--horz), 50vw - 0.5*var(--width)));
-	padding-right: calc(max(var(--horz), 50vw - 0.5*var(--width)));
+	padding-left: calc(max(var(--padding), 50vw - 0.5*var(--width)));
+	padding-right: calc(max(var(--padding), 50vw - 0.5*var(--width)));
 }
 
-section, main {
-	background-color: var(--body-bg);
+main, section {
+	background-color: var(--bg);
 	box-sizing: border-box;
 }
 
 nav, section:nth-of-type(odd) {
-	background-color: var(--body-bg2);
+	background-color: var(--bg2);
 }
 
 nav {
-	padding-top: var(--tiny-skip);
-	padding-bottom: var(--tiny-skip);
+	padding: var(--tiny-skip) var(--padding);
 	position: fixed;
 	width: 100%;
 	bottom: 0;
@@ -72,19 +52,16 @@ h1, h2 {
 	
 h1 {
 	font-size: 2em;
-	color: var(--accent);
+	color: var(--secondary);
 }
 h2 {
-	color: var(--accent2);
+	color: var(--tertiary);
 	font-style: oblique;
-}
-
-h2, p + p, details + p {
 	margin-top: var(--med-skip);
 }
 
-a {
-	color: var(--link);
+p + p, details + p {
+	margin-top: var(--med-skip);
 }
 
 /* --- photo */
@@ -92,8 +69,8 @@ a {
 	width: calc(var(--width)/3);
 	max-width: 100%;
 	float: right;
-	margin: 0 0 var(--med-skip) calc(2*var(--horz));
-	box-shadow: calc(-0.5*var(--horz)) calc(0.5*var(--horz)) var(--accent), calc(0.5*var(--horz)) calc(-0.5*var(--horz)) var(--accent2);
+	margin: 0 0 var(--med-skip) calc(2*var(--padding));
+	box-shadow: calc(-0.5*var(--padding)) calc(0.5*var(--padding)) var(--secondary), calc(0.5*var(--padding)) calc(-0.5*var(--padding)) var(--tertiary);
 }
 
 /* --- text */

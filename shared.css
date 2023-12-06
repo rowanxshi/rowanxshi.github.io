@@ -1,11 +1,40 @@
 * {
-	--horz: 8px;
+	--padding: 8px;
 	--ss-fonts: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 	--serif-fonts: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	--mono-fonts: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+
+	/* COLOURS */
+	--main-hue: 260;
+	--bg: hsl(var(--main-hue), 25%, 10%);
+	--bg2: hsl(var(--main-hue), 25%, 15%);
+	--body: hsl(var(--main-hue), 50%, 90%);
+	--link: hsl(calc(var(--main-hue) + 90), 75%, 70%);
+	--secondary: hsl(calc(var(--main-hue) + 90), 50%, 80%);
+	--tertiary: hsl(var(--main-hue), 75%, 65%);
+	/* --accent3: hsl(240, 75%, 80%); */
+	/* --bg: hsl(240, 50%, 10%); */
+	
+	/* LENGTHS */
+	--tiny-skip: 0.25rem;
+	--small-skip: 0.5rem;
+	--med-skip: 1rem;
+	--big-skip: 2rem;
+	--width: 65ch;
+	--line-height: 1.5rem;
+}
+
+html {
+	color: var(--body);
+	background-color: var(--bg);
+}
+body, p, h1, h2 {
+	margin: 0;
+	padding: 0;
 }
 
 a { 
+	color: var(--link);
 	transition: filter 0.25s ease-in-out;
 }
 
