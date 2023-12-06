@@ -21,7 +21,7 @@ main, section {
 	box-sizing: border-box;
 }
 
-nav, section:nth-of-type(odd) {
+html, nav, section:nth-of-type(odd) {
 	background-color: var(--bg2);
 }
 
@@ -53,6 +53,7 @@ h1, h2 {
 h1 {
 	font-size: 2em;
 	color: var(--secondary);
+	text-shadow: -0.2rem 0.1rem 0.1rem var(--accent);
 }
 h2 {
 	color: var(--tertiary);
@@ -70,7 +71,7 @@ p + p, details + p {
 	max-width: 100%;
 	float: right;
 	margin: 0 0 var(--med-skip) calc(2*var(--padding));
-	box-shadow: calc(-0.5*var(--padding)) calc(0.5*var(--padding)) var(--secondary), calc(0.5*var(--padding)) calc(-0.5*var(--padding)) var(--tertiary);
+	box-shadow: calc(-0.5*var(--padding)) calc(0.5*var(--padding)) var(--secondary), calc(0.5*var(--padding)) calc(-0.5*var(--padding)) var(--accent);
 }
 
 /* --- text */
