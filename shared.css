@@ -1,8 +1,8 @@
 * {
 	--padding: 8px;
-	--ss-fonts: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
-	--serif-fonts: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-	--mono-fonts: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--ss-fonts: sans-serif;
+	--serif-fonts: serif;
+	--mono-fonts: monospace;
 
 	/* COLOURS */
 	--main-hue: 240;
@@ -12,8 +12,8 @@
 	--link: hsl(var(--main-hue), 75%, 75%);
 	--secondary: hsl(calc(var(--main-hue) + 180), 75%, 55%);
 	--tertiary: hsl(calc(var(--main-hue) + 45), 75%, 55%);
-	--quaternary: hsl(var(--main-hue), 25%, 45%);
 	--accent: hsl(calc(var(--main-hue) + 90), 75%, 55%);
+	--quaternary: hsl(var(--main-hue), 25%, 45%);
 	
 	/* LENGTHS */
 	--tiny-skip: 0.25rem;
