@@ -7,7 +7,7 @@
 	/* COLOURS */
 	--main-hue: 240;
 	--bg: hsl(var(--main-hue), 25%, 10%);
-	--bg2: hsl(var(--main-hue), 25%, 15%);
+	--bg2: hsl(var(--main-hue), 25%, 13%);
 	--body: hsl(var(--main-hue), 50%, 85%);
 	--link: hsl(var(--main-hue), 75%, 75%);
 	--secondary: hsl(calc(var(--main-hue) + 180), 75%, 55%);

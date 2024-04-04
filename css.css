@@ -2,7 +2,7 @@
 	--small-font: 0.85rem;
 }
 
-html, body, h1, p, details + p.small {
+html, body, h1, p, p.small {
 	margin: 0;
 	padding: 0;
 	line-height: var(--line-height);
@@ -42,14 +42,10 @@ section {
 
 section:last-of-type {
 	min-height: 100vh;
-	box-sizing: border-box;
+	padding-bottom: calc(2*var(--big-skip));
 }
 
 /* -- STYLE -- */
-h1, h2 {
-	margin-bottom: var(--med-skip);
-}
-	
 h1 {
 	font-size: 2em;
 	color: var(--secondary);
@@ -61,6 +57,12 @@ h2 {
 	margin-top: var(--med-skip);
 }
 
+h1 {
+	margin-bottom: var(--big-skip);
+}
+h2 {
+	margin-bottom: var(--med-skip);
+}
 p + p, details + p {
 	margin-top: var(--med-skip);
 }
@@ -75,9 +77,7 @@ p + p, details + p {
 }
 
 /* --- text */
-.clear {
-	clear: both;
-}
+.clear { clear: both; }
 
 .small, details { font-size: var(--small-font); }
 
